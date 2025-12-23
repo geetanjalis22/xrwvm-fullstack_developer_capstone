@@ -5,13 +5,15 @@ from django.conf import settings
 from django.urls import path
 from . import views
 
+# from . import views
 
 app_name = 'djangoapp'
 urlpatterns = [
     # # path for registration
 
-    # path for login
+    # path for login/logout
     path(route='login', view=views.login_user, name='login'),
+    path('logout/', views.logout_request, name='logout'),
 
     # path for dealer reviews view
 
